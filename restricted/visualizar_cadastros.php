@@ -8,7 +8,7 @@ if ($mysqli->connect_error) {
     die("Erro ao conectar: " . $mysqli->connect_error);
 }
 
-$sql = "SELECT * FROM voluntarios"; // Certifique-se de que a tabela e os campos estão corretos
+$sql = "SELECT * FROM voluntarios";
 $result = $mysqli->query($sql);
 ?>
 
@@ -30,17 +30,16 @@ $result = $mysqli->query($sql);
     <style>
         /* Definindo as cores para as linhas */
         .linha-ativa {
-            background-color: #d4edda; /* Verde claro */
+            background-color: #d4edda;
         }
 
         .linha-inativa {
-            background-color: #f8d7da; /* Vermelho claro */
+            background-color: #f8d7da; 
         }
     </style>
 </head>
 
 <body class="bg-light-gray">
-    <!-- Cabeçalho -->
     <header class="custom-header">
         <div class="container d-flex justify-content-between align-items-center py-3">
             <img src="../img/logo.png" alt="Logo Impactação" class="logo-header" style="width: 100px;">
@@ -51,8 +50,7 @@ $result = $mysqli->query($sql);
             </nav>
         </div>
     </header>
-
-    <!-- Conteúdo Principal -->
+    
     <main class="container my-5">
         <h2 class="text-center mb-4">Visualização dos Cadastros</h2>
 
