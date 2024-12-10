@@ -1,0 +1,292 @@
+/* Estilos gerais */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.70ch;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* Flexbox para garantir o layout correto */
+}
+
+/* Header personalizado */
+.custom-header {
+    border-bottom: 3px solid #727272 !important;
+    background-color: #414141 !important;
+    color: #fff !important;
+    padding: 0.8rem 1.5rem !important; /* Menor padding no header */
+}
+
+/* Logo do header */
+.logo-header {
+    height: 60px !important; /* Logo menor */
+    width: auto !important;
+}
+
+/* Links de navegação */
+.nav-link {
+    font-size: 1rem; /* Menor tamanho de fonte */
+    color: #fff !important;
+    margin-right: 0.8rem; /* Menor espaçamento entre links */
+}
+
+/* Responsividade do cabeçalho */
+@media (max-width: 992px) {
+    .navbar-collapse {
+        background-color: #414141;
+        padding: 8px;
+    }
+    .navbar-toggler {
+        border-color: #ffffff;
+    }
+}
+
+/* Título */
+h2 {
+    color: #ED1B24 !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
+    font-size: 1.5rem; /* Menor tamanho do título */
+}
+
+/* Cabeçalho da tabela */
+.table thead {
+    background-color: #6d6d6d !important;
+}
+
+/* Centralização do conteúdo principal */
+main {
+    width: 100%;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 15px;
+    flex: 1; /* Garante que o conteúdo principal ocupe o espaço restante */
+}
+
+/* Imagens dos voluntários */
+.img-voluntarios {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 8px !important;
+}
+
+/* Container de header e conteúdo principal */
+.container-header, .main-content {
+    max-width: 1000px !important;
+    padding: 0 1rem !important; /* Menor padding */
+}
+
+/* Fundo personalizado para outras páginas com imagem */
+.bg-custom {
+    background-image: url('../img/fundo.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    min-height: 100vh;
+    opacity: 0.9 !important;
+}
+
+/* Estilo específico para a página de cadastro */
+.bg-light-gray {
+    background-color: #f2f2f2 !important;
+}
+
+.main-content-cadastro {
+    padding: 1rem;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    width: 80%; /* Ajuste a largura para ser menor */
+    max-width: 800px; /* Limite máximo da largura */
+    margin: 0 auto; /* Centraliza o formulário na tela */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para destacar o formulário */
+}
+
+/* Estilos para os campos de entrada */
+.main-content-cadastro input,
+.main-content-cadastro select,
+.main-content-cadastro textarea {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* Estilo para botões de envio no formulário */
+.main-content-cadastro button {
+    padding: 0.75rem 2rem;
+    background-color: #ED1B24;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.main-content-cadastro button:hover {
+    background-color: #d10d1b;
+}
+
+/* Estilo para campos de validação */
+input.is-invalid, textarea.is-invalid {
+    border-color: #dc3545 !important;
+}
+
+input.is-valid, textarea.is-valid {
+    border-color: #28a745 !important;
+}
+
+.invalid-feedback {
+    display: block;
+    color: #dc3545 !important;
+}
+
+.is-invalid ~ .invalid-feedback {
+    display: block;
+}
+
+/* Estilo para alertas de erro */
+.alert {
+    margin-top: 15px; /* Menor margem para alertas */
+}
+
+.alert-danger {
+    background-color: #f8d7da !important;
+    border-color: #f5c6cb !important;
+    color: #721c24 !important;
+}
+
+.alert-success {
+    background-color: #d4edda !important;
+    border-color: #c3e6cb !important;
+    color: #155724 !important;
+}
+
+/* Estilo para telas menores que 992px */
+@media (max-width: 991px) {
+    .img-voluntarios {
+        margin-top: 15px; /* Ajuste do espaçamento */
+    }
+}
+
+/* Centralizar a tabela na página */
+.table-responsive {
+    margin: 0 auto;
+    max-width: 100%;
+    overflow-x: hidden !important;
+    width: 100%;
+}
+
+/* Ajuste da largura da tabela e das colunas */
+.table {
+    width: 100% !important;
+    table-layout: auto;
+    font-size: 0.8rem; /* Fonte menor na tabela */
+}
+
+.table th, .table td {
+    text-align: center;
+    vertical-align: middle;
+    padding: .1rem .4rem; /* Ajustado para compactar mais */
+    background-color: var(--bs-table-bg) !important;
+    border-bottom-width: var(--bs-border-width) !important;
+    box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg) !important;
+}
+
+/* Ajuste da largura da coluna 'Status do Colete' */
+.table th:nth-child(6), .table td:nth-child(6) {
+    width: 130px !important; /* Menor largura para a coluna 'Status do Colete' */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Botões de editar e deletar */
+.table .btn {
+    margin: 3px;
+    padding: 3px 8px;
+    font-size: 0.7rem; /* Botões menores */
+}
+
+/* Estilo para a caixa de seleção de status */
+.form-select {
+    --bs-form-select-bg-img: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e);
+    display: block;
+    width: 100%;
+    padding: .10rem 0.75rem .150rem .10rem !important;
+    -moz-padding-start: calc(0.75rem - 3px);
+    font-size: 0.75rem;
+    font-weight: 100;
+    line-height: 1.5;
+    color: var(--bs-body-color);
+    background-color: var(--bs-form-control-bg);
+    background-image: var(--bs-form-select-bg-img), var(--bs-form-select-bg-icon, none);
+    background-repeat: no-repeat;
+    background-position: right .75rem center;
+    background-size: 16px 12px;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: .375rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Adiciona a cor personalizada para o select após a seleção */
+.form-select option[value='OK'] {
+    background-color: #28a745 !important;
+    color: #fff !important;
+}
+
+.form-select option[value='Dev'] {
+    background-color: #ffc107 !important;
+    color: #000 !important;
+}
+
+/* Footer fixo e estilizado */
+.footer-custom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 0.40rem 0; /* Footer mais "fino" */
+    font-size: 0.7rem; /* Menor tamanho de fonte no footer */
+    z-index: 1000;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para o footer */
+}
+
+/* Ajustes no layout principal para evitar sobreposição do footer */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container principal ajustado */
+main {
+    flex: 1; /* Garante que o conteúdo principal ocupe o espaço restante */
+}
+
+.footer-image {
+    position: absolute;
+    bottom: 10px; /* Ajuste a distância do rodapé */
+    right: 10px;  /* Ajuste a distância do canto direito */
+    z-index: 1100;
+}
+
+.mini-logo {
+    height: 15px;
+    width: auto;
+    margin-left: auto;
+    margin-right: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    margin-top: -54px;
+}
+
+.mini-logo:hover {
+    opacity: 1; /* Deixa a imagem totalmente visível ao passar o mouse */
+}
